@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins' , sans-serif;
+}
+
+body {
+    background-color: rgb(19, 104, 231);
+    background-image:
+        radial-gradient(circle at 50% 50%, white 19%, transparent 21%),
+        radial-gradient(circle at 25% 35%, white 24%, transparent 26%),
+        radial-gradient(circle at 40% 35%, white 17%, transparent 19%);
+    background-size: 180px 180px;
+    background-attachment: fixed;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(23, 78, 129);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(168, 133, 68);
+    border-radius: 6px;
+    border: 3px solid rgb(23, 78, 129);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(221, 74, 74)
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background: rgba(14, 32, 67, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 3px solid rgb(255, 208, 0);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+}
+
+.logo-img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.03) rotate(-4deg);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: rgb(168, 133, 68);
+    border-radius: 2px;
+    transition: width 0.3 ease;
+}
+
+.nav-links a:hover {
+    color: yellow;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-btn {
+    text-decoration: none;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #00d254, #009933); /* Buzz Green */
+    padding: 10px 22px;
+    border-radius: 50px;
+    border: 2px solid #00ff66;
+    box-shadow: 0 4px 15px rgba(0, 255, 102, 0.4);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.nav-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    border-color: #a78bfa;
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
