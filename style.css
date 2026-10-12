@@ -151,7 +151,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 120px 20px 60px 20px;
-    background: url('andy-room.jpg') center/cover no-repeat fixed;
+    background: url('images/andy-room.jpg') center/cover no-repeat fixed;
     overflow: hidden;
 }
 
