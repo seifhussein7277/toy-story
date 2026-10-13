@@ -673,3 +673,108 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+.locations-section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.location-card {
+    background: rgba(15, 32, 67, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.45);
+    border-color: rgba(0, 255, 102, 0.4);
+}
+
+.location-image-container {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.location-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.location-card:hover .location-img {
+    transform: scale(1.08);
+}
+
+.location-tag {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+    color: rgb(0, 255, 102);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 102, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.location-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.location-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.35rem;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.location-desc {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: rgb(185, 205, 225);
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.location-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 12px;
+}
+
+.location-stat {
+    font-size: 0.8rem;
+    color: rgb(255, 204, 0);
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .locations-grid {
+        grid-template-columns: 1fr;
+    }
+}
